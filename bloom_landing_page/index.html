@@ -1,0 +1,650 @@
+<!doctype html>
+<html lang="es" class="scroll-smooth dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bloom Your Day - Forja tu Disciplina Diaria</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              brandDark: "#0f172a",
+              brandLight: "#f1f5f9",
+              brandEmerald: "#10b981",
+              brandBlue: "#3b82f6",
+              brandCardDark: "#1e293b",
+              brandCardLight: "#ffffff",
+            },
+          },
+        },
+      };
+    </script>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <style>
+      body,
+      .bg-brandCard,
+      .border,
+      p,
+      h1,
+      h2,
+      h3,
+      h4,
+      span,
+      div {
+        transition:
+          background-color 0.4s ease,
+          color 0.4s ease,
+          border-color 0.4s ease,
+          box-shadow 0.4s ease;
+      }
+
+      /* Estilos Neumórficos Custom para el Switch */
+      .neumorphic-track {
+        box-shadow:
+          inset 3px 3px 6px rgba(0, 0, 0, 0.1),
+          inset -3px -3px 6px rgba(255, 255, 255, 0.7);
+      }
+      .dark .neumorphic-track {
+        box-shadow:
+          inset 3px 3px 6px rgba(0, 0, 0, 0.5),
+          inset -3px -3px 6px rgba(255, 255, 255, 0.02);
+      }
+      .neumorphic-thumb {
+        box-shadow:
+          2px 2px 5px rgba(0, 0, 0, 0.15),
+          -2px -2px 5px rgba(255, 255, 255, 0.8);
+      }
+      .dark .neumorphic-thumb {
+        box-shadow:
+          2px 2px 5px rgba(0, 0, 0, 0.5),
+          -1px -1px 3px rgba(255, 255, 255, 0.1);
+      }
+    </style>
+  </head>
+  <body
+    class="bg-brandLight dark:bg-brandDark text-slate-900 dark:text-white font-sans antialiased selection:bg-brandEmerald selection:text-white min-h-screen"
+  >
+    <nav
+      class="fixed w-full z-50 bg-brandLight/80 dark:bg-brandDark/80 backdrop-blur-lg border-b border-slate-200 dark:border-white/10 transition-colors duration-[400ms]"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-20">
+          <div class="flex items-center gap-3">
+            <img
+              src="logo.png"
+              alt="Logo Bloom Your Day"
+              class="h-10 w-auto object-contain"
+            />
+            <span
+              class="font-extrabold text-2xl tracking-tight text-slate-950 dark:text-white"
+              >Bloom Your Day</span
+            >
+          </div>
+
+          <div
+            class="hidden lg:flex space-x-6 items-center font-medium text-sm"
+          >
+            <a
+              href="#atractivos"
+              class="text-slate-600 dark:text-gray-400 hover:text-brandEmerald dark:hover:text-white transition"
+              >Atractivos</a
+            >
+            <a
+              href="#quienes-somos"
+              class="text-slate-600 dark:text-gray-400 hover:text-brandEmerald dark:hover:text-white transition"
+              >Quiénes Somos</a
+            >
+            <a
+              href="#mision"
+              class="text-slate-600 dark:text-gray-400 hover:text-brandEmerald dark:hover:text-white transition"
+              >Misión y Visión</a
+            >
+          </div>
+
+          <div class="flex items-center gap-4 sm:gap-6">
+            <label
+              for="darkModeToggle"
+              class="relative flex items-center cursor-pointer"
+            >
+              <input
+                type="checkbox"
+                id="darkModeToggle"
+                class="sr-only peer"
+                checked
+                onclick="toggleDarkMode()"
+              />
+              <div
+                class="w-16 h-8 bg-slate-200 dark:bg-brandCardDark rounded-[40px] neumorphic-track transition-colors duration-[400ms] ease-in-out"
+              ></div>
+              <div
+                class="absolute left-0 w-8 h-8 bg-white dark:bg-slate-700 rounded-full neumorphic-thumb flex items-center justify-center transition-transform duration-[400ms] ease-in-out peer-checked:translate-x-8"
+              >
+                <i
+                  class="fa-solid fa-sun text-amber-500 text-[14px] block dark:hidden transition-opacity duration-[400ms]"
+                ></i>
+                <i
+                  class="fa-solid fa-moon text-blue-300 text-[14px] hidden dark:block transition-opacity duration-[400ms]"
+                ></i>
+              </div>
+            </label>
+
+            <a
+              href="descargas.html"
+              target="_blank"
+              class="bg-brandEmerald hover:bg-emerald-500 text-white px-5 py-2.5 rounded-full font-bold transition-all shadow-lg hover:shadow-emerald-500/30 transform hover:-translate-y-0.5 text-sm sm:text-base"
+            >
+              Comenzar
+            </a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <section
+      class="relative pt-40 pb-20 lg:pt-52 lg:pb-32 overflow-hidden text-center bg-brandLight dark:bg-brandDark transition-colors duration-[400ms]"
+    >
+      <div class="max-w-4xl mx-auto px-4 relative z-10">
+        <div
+          class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-brandBlue/10 text-brandBlue font-semibold text-sm mb-8 border border-brandBlue/20"
+        >
+          <i class="fa-solid fa-star"></i> La nueva forma de dominar tu tiempo
+        </div>
+        <h1
+          class="text-5xl md:text-7xl font-black tracking-tight mb-8 leading-tight text-slate-950 dark:text-white"
+        >
+          Tu vida es el juego más importante.<br />
+          <span
+            class="text-transparent bg-clip-text bg-gradient-to-r from-brandEmerald to-brandBlue"
+            >Empieza a ganarlo.</span
+          >
+        </h1>
+        <p
+          class="text-xl text-slate-600 dark:text-gray-400 max-w-2xl mx-auto mb-16 leading-relaxed"
+        >
+          Reemplaza la procrastinación por disciplina. Haz seguimiento de tus
+          hábitos, gana experiencia (XP) y sube de nivel en el mundo real.
+        </p>
+
+        <a
+          href="descargas.html"
+          target="_blank"
+          class="inline-flex items-center justify-center gap-4 bg-gradient-to-r from-brandEmerald to-emerald-500 text-white px-12 py-5 rounded-full font-extrabold text-2xl transition-all shadow-[0_0_40px_rgba(16,185,129,0.3)] hover:shadow-[0_0_60px_rgba(16,185,129,0.5)] hover:scale-105 transform"
+        >
+          Descargar la App
+          <i class="fa-solid fa-arrow-down-right-from-square text-lg"></i>
+        </a>
+      </div>
+      <div
+        class="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-brandEmerald/20 rounded-full blur-[120px] pointer-events-none hidden dark:block"
+      ></div>
+    </section>
+
+    <section
+      id="atractivos"
+      class="py-24 bg-white dark:bg-brandCardDark border-y border-slate-200 dark:border-white/5 scroll-mt-20 transition-colors duration-[400ms]"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl font-bold mb-4 text-slate-950 dark:text-white">
+            Atractivos y Gamificación
+          </h2>
+          <p class="text-slate-600 dark:text-gray-400 max-w-2xl mx-auto">
+            Un ecosistema completo diseñado para recompensar tu esfuerzo y
+            mantenerte enfocado.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div
+            class="bg-slate-50 dark:bg-brandDark p-8 rounded-3xl border border-slate-200 dark:border-white/5 hover:bg-purple-50 dark:hover:bg-purple-900/20 hover:border-purple-300 dark:hover:border-purple-500/50 hover:shadow-xl transition-all group duration-[400ms]"
+          >
+            <i
+              class="fa-solid fa-gamepad text-3xl text-purple-500 dark:text-purple-400 mb-6 block group-hover:scale-110 transition-transform"
+            ></i>
+            <h3 class="text-xl font-bold mb-3 text-slate-950 dark:text-white">
+              XP y Niveles Reales
+            </h3>
+            <p
+              class="text-slate-600 dark:text-gray-400 text-sm leading-relaxed"
+            >
+              Gana experiencia por cada hábito. Sube de nivel y desbloquea temas
+              visuales exclusivos.
+            </p>
+          </div>
+          <div
+            class="bg-slate-50 dark:bg-brandDark p-8 rounded-3xl border border-slate-200 dark:border-white/5 hover:bg-rose-50 dark:hover:bg-rose-900/20 hover:border-rose-300 dark:hover:border-rose-500/50 hover:shadow-xl transition-all group duration-[400ms]"
+          >
+            <i
+              class="fa-solid fa-fire text-3xl text-rose-500 mb-6 block group-hover:scale-110 transition-transform"
+            ></i>
+            <h3 class="text-xl font-bold mb-3 text-slate-950 dark:text-white">
+              Rachas de Disciplina
+            </h3>
+            <p
+              class="text-slate-600 dark:text-gray-400 text-sm leading-relaxed"
+            >
+              Mantén vivos tus hábitos. Las rachas continuas te motivan a no
+              fallar ni un solo día.
+            </p>
+          </div>
+          <div
+            class="bg-slate-50 dark:bg-brandDark p-8 rounded-3xl border border-slate-200 dark:border-white/5 hover:bg-emerald-50 dark:hover:bg-emerald-900/20 hover:border-emerald-300 dark:hover:border-brandEmerald/50 hover:shadow-xl transition-all group duration-[400ms]"
+          >
+            <i
+              class="fa-solid fa-chart-pie text-3xl text-brandEmerald mb-6 block group-hover:scale-110 transition-transform"
+            ></i>
+            <h3 class="text-xl font-bold mb-3 text-slate-950 dark:text-white">
+              Estadísticas Avanzadas
+            </h3>
+            <p
+              class="text-slate-600 dark:text-gray-400 text-sm leading-relaxed"
+            >
+              Mapas de calor de actividad y gráficas mensuales para conocer tu
+              rendimiento a fondo.
+            </p>
+          </div>
+          <div
+            class="bg-slate-50 dark:bg-brandDark p-8 rounded-3xl border border-slate-200 dark:border-white/5 hover:bg-blue-50 dark:hover:bg-blue-900/20 hover:border-blue-300 dark:hover:border-blue-500/50 hover:shadow-xl transition-all group duration-[400ms]"
+          >
+            <i
+              class="fa-solid fa-cloud-arrow-up text-3xl text-blue-500 mb-6 block group-hover:scale-110 transition-transform"
+            ></i>
+            <h3 class="text-xl font-bold mb-3 text-slate-950 dark:text-white">
+              Sincronización en Nube
+            </h3>
+            <p
+              class="text-slate-600 dark:text-gray-400 text-sm leading-relaxed"
+            >
+              Conéctate desde tu celular o computadora. Tu progreso se guarda y
+              sincroniza al instante.
+            </p>
+          </div>
+          <div
+            class="bg-slate-50 dark:bg-brandDark p-8 rounded-3xl border border-slate-200 dark:border-white/5 hover:bg-orange-50 dark:hover:bg-orange-900/20 hover:border-orange-300 dark:hover:border-orange-500/50 hover:shadow-xl transition-all group duration-[400ms]"
+          >
+            <i
+              class="fa-solid fa-hourglass-half text-3xl text-orange-500 mb-6 block group-hover:scale-110 transition-transform"
+            ></i>
+            <h3 class="text-xl font-bold mb-3 text-slate-950 dark:text-white">
+              Modo Focus Exclusivo
+            </h3>
+            <p
+              class="text-slate-600 dark:text-gray-400 text-sm leading-relaxed"
+            >
+              Un temporizador inmersivo de pantalla completa diseñado para
+              sesiones de trabajo sin distracciones.
+            </p>
+          </div>
+          <div
+            class="bg-slate-50 dark:bg-brandDark p-8 rounded-3xl border border-slate-200 dark:border-white/5 hover:bg-sky-50 dark:hover:bg-sky-900/20 hover:border-sky-300 dark:hover:border-sky-500/50 hover:shadow-xl transition-all group duration-[400ms]"
+          >
+            <i
+              class="fa-solid fa-fingerprint text-3xl text-sky-400 mb-6 block group-hover:scale-110 transition-transform"
+            ></i>
+            <h3 class="text-xl font-bold mb-3 text-slate-950 dark:text-white">
+              Privacidad Biométrica
+            </h3>
+            <p
+              class="text-slate-600 dark:text-gray-400 text-sm leading-relaxed"
+            >
+              Tus metas son personales. Protege el acceso mediante huella
+              dactilar o Face ID de tu dispositivo.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section
+      id="quienes-somos"
+      class="py-24 bg-brandLight dark:bg-brandDark scroll-mt-20 transition-colors duration-[400ms]"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-col lg:flex-row items-center gap-12">
+          <div class="lg:w-1/2 flex justify-center">
+            <div
+              class="relative bg-white dark:bg-brandCardDark p-10 rounded-[30px] border border-slate-200 dark:border-white/10 shadow-2xl w-full max-w-md flex justify-center items-center h-80 transition-colors duration-[400ms]"
+            >
+              <img
+                src="logo.png"
+                alt="Logo Centro"
+                class="h-40 w-auto object-contain relative z-10 transition-transform hover:scale-105"
+              />
+              <div
+                class="absolute inset-0 bg-brandEmerald/5 dark:bg-brandEmerald/10 rounded-[30px] blur-xl"
+              ></div>
+            </div>
+          </div>
+
+          <div class="lg:w-1/2">
+            <h2 class="text-4xl font-bold mb-6 text-slate-950 dark:text-white">
+              Quiénes Somos
+            </h2>
+            <p
+              class="text-slate-600 dark:text-gray-400 text-lg mb-6 leading-relaxed"
+            >
+              Somos un equipo de desarrolladores enfocados en transformar la
+              forma en que gestionamos nuestro crecimiento personal a través de
+              la tecnología.
+            </p>
+            <p class="text-slate-600 dark:text-gray-400 leading-relaxed mb-6">
+              Creamos un sistema multiplataforma, limpio, moderno y diseñado
+              psicológicamente para que disfrutarás el proceso de mejorar tu
+              propia vida.
+            </p>
+            <div class="flex items-center gap-4 text-brandEmerald font-bold">
+              <i class="fa-solid fa-code text-2xl"></i> Desarrollado con
+              excelencia técnica.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section
+      id="mision"
+      class="py-24 bg-white dark:bg-brandCardDark border-y border-slate-200 dark:border-white/5 scroll-mt-20 transition-colors duration-[400ms]"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-10 mb-10">
+          <div
+            class="bg-slate-50 dark:bg-brandDark p-10 md:p-14 rounded-[30px] border border-brandEmerald/20 relative overflow-hidden group hover:-translate-y-2 transition-transform duration-300 shadow-xl"
+          >
+            <div
+              class="absolute top-0 right-0 w-32 h-32 bg-brandEmerald/10 rounded-bl-full -z-0"
+            ></div>
+            <div class="relative z-10 flex flex-col h-full">
+              <div
+                class="w-16 h-16 bg-brandEmerald/20 rounded-2xl flex items-center justify-center mb-8"
+              >
+                <i class="fa-solid fa-bullseye text-3xl text-brandEmerald"></i>
+              </div>
+              <h2
+                class="text-3xl font-bold mb-6 text-slate-950 dark:text-white"
+              >
+                Nuestra Misión
+              </h2>
+              <p
+                class="text-slate-600 dark:text-gray-400 leading-relaxed text-lg flex-grow"
+              >
+                Empoderar a las personas para que tomen el control absoluto de
+                su tiempo y forjen una disciplina inquebrantable a base de
+                pequeñas victorias diarias.
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="bg-slate-50 dark:bg-brandDark p-10 md:p-14 rounded-[30px] border border-brandBlue/20 relative overflow-hidden group hover:-translate-y-2 transition-transform duration-300 shadow-xl"
+          >
+            <div
+              class="absolute top-0 right-0 w-32 h-32 bg-brandBlue/10 rounded-bl-full -z-0"
+            ></div>
+            <div class="relative z-10 flex flex-col h-full">
+              <div
+                class="w-16 h-16 bg-brandBlue/20 rounded-2xl flex items-center justify-center mb-8"
+              >
+                <i class="fa-solid fa-eye text-3xl text-brandBlue"></i>
+              </div>
+              <h2
+                class="text-3xl font-bold mb-6 text-slate-950 dark:text-white"
+              >
+                Nuestra Visión
+              </h2>
+              <p
+                class="text-slate-600 dark:text-gray-400 leading-relaxed text-lg flex-grow"
+              >
+                Convertirnos en el estándar de oro del desarrollo personal,
+                haciendo que la superación sea tan envolvente y adictiva como un
+                videojuego.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex justify-center">
+          <div
+            class="max-w-4xl w-full bg-slate-50 dark:bg-brandDark p-10 md:p-14 rounded-[30px] border border-brandEmerald/20 relative overflow-hidden shadow-xl text-center transition-colors duration-[400ms]"
+          >
+            <div
+              class="absolute inset-0 bg-brandEmerald/5 pointer-events-none"
+            ></div>
+            <div class="relative z-10">
+              <div
+                class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-brandEmerald/10 text-brandEmerald font-medium text-xs mb-6 border border-brandEmerald/20"
+              >
+                <i class="fa-solid fa-dna"></i> La ciencia detrás del hábito
+              </div>
+              <h2
+                class="text-3xl font-bold mb-6 text-slate-950 dark:text-white"
+              >
+                Nuestra Esencia: Bloom Your Day
+              </h2>
+              <p
+                class="text-slate-600 dark:text-gray-400 leading-relaxed text-lg"
+              >
+                Utilizamos principios de la psicología del comportamiento y el
+                condicionamiento operante. Al gamificar tus hábitos, reducimos
+                la carga cognitiva necesaria para empezar. Tu cerebro se
+                "sintoniza" para buscar la disciplina a cambio de la dopamina
+                del logro visual.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer
+      class="bg-slate-50 dark:bg-brandCardDark border-t border-slate-200 dark:border-white/5 pt-16 pb-8 transition-colors duration-[400ms]"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+          <div class="col-span-1 md:col-span-1">
+            <div class="flex items-center gap-3 mb-4">
+              <img
+                src="logo.png"
+                alt="Logo Footer"
+                class="h-8 w-auto object-contain"
+              />
+              <span class="font-bold text-xl text-slate-950 dark:text-white"
+                >Bloom Your Day</span
+              >
+            </div>
+            <p class="text-slate-600 dark:text-gray-400 text-sm mb-6">
+              Forjando disciplina, un hábito a la vez.
+            </p>
+            <div class="flex space-x-4">
+              <a
+                href="#"
+                class="text-slate-400 hover:text-brandEmerald transition"
+                ><i class="fa-brands fa-instagram text-xl"></i
+              ></a>
+              <a href="#" class="text-slate-400 hover:text-brandBlue transition"
+                ><i class="fa-brands fa-twitter text-xl"></i
+              ></a>
+              <a
+                href="#"
+                class="text-slate-400 hover:text-slate-900 dark:hover:text-white transition"
+                ><i class="fa-brands fa-github text-xl"></i
+              ></a>
+            </div>
+          </div>
+
+          <div>
+            <h4 class="font-bold text-slate-950 dark:text-white mb-4">
+              Explorar
+            </h4>
+            <ul class="space-y-3 text-sm text-slate-600 dark:text-gray-400">
+              <li>
+                <a href="#atractivos" class="hover:text-brandEmerald transition"
+                  >Atractivos</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#quienes-somos"
+                  class="hover:text-brandEmerald transition"
+                  >Quiénes Somos</a
+                >
+              </li>
+              <li>
+                <a href="#mision" class="hover:text-brandEmerald transition"
+                  >Misión y Visión</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="font-bold text-slate-950 dark:text-white mb-4">Legal</h4>
+            <ul class="space-y-3 text-sm text-slate-600 dark:text-gray-400">
+              <li>
+                <a href="#" class="hover:text-brandEmerald transition"
+                  >Términos de Servicio</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-brandEmerald transition"
+                  >Política de Privacidad</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="font-bold text-slate-950 dark:text-white mb-4">
+              Soporte
+            </h4>
+            <ul class="space-y-3 text-sm text-slate-600 dark:text-gray-400">
+              <li>
+                <a
+                  href="mailto:soporte@bloomyourday.com"
+                  class="hover:text-brandEmerald transition"
+                  >Centro de Ayuda</a
+                >
+              </li>
+              <li>
+                <button
+                  onclick="openReportModal()"
+                  class="text-brandBlue hover:text-blue-500 font-bold transition flex items-center gap-2 mt-2"
+                >
+                  <i class="fa-solid fa-bug"></i> ¿Encontraste un problema?
+                </button>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div
+          class="border-t border-slate-200 dark:border-white/5 pt-8 text-center text-slate-500 text-xs"
+        >
+          &copy; 2026 Bloom Your Day. Todos los derechos reservados.
+        </div>
+      </div>
+    </footer>
+
+    <div
+      id="reportModal"
+      class="fixed inset-0 z-[100] hidden bg-brandDark/80 backdrop-blur-sm flex items-center justify-center p-4 opacity-0 transition-opacity duration-300"
+    >
+      <div
+        id="reportModalContent"
+        class="bg-white dark:bg-brandCardDark p-8 rounded-3xl border border-black/10 dark:border-white/10 w-full max-w-lg shadow-2xl relative transform scale-95 transition-transform duration-300"
+      >
+        <button
+          onclick="closeReportModal()"
+          class="absolute top-5 right-5 text-slate-400 hover:text-rose-500 transition text-2xl"
+        >
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+
+        <div class="text-center mb-6">
+          <i class="fa-solid fa-headset text-4xl text-brandBlue mb-4"></i>
+          <h2 class="text-2xl font-bold mb-2 text-slate-950 dark:text-white">
+            Reportar un Problema
+          </h2>
+          <p class="text-slate-600 dark:text-gray-400 text-sm">
+            Descríbenos el error que encontraste o envíanos tu sugerencia.
+          </p>
+        </div>
+
+        <form class="space-y-4">
+          <input
+            type="email"
+            placeholder="Tu Correo Electrónico"
+            class="w-full bg-slate-100 dark:bg-brandDark border border-black/10 dark:border-white/10 rounded-xl px-4 py-3 text-slate-950 dark:text-white focus:outline-none focus:border-brandEmerald transition"
+          />
+          <textarea
+            rows="4"
+            placeholder="Describe el problema en detalle..."
+            class="w-full bg-slate-100 dark:bg-brandDark border border-black/10 dark:border-white/10 rounded-xl px-4 py-3 text-slate-950 dark:text-white focus:outline-none focus:border-brandEmerald transition"
+          ></textarea>
+          <button
+            type="button"
+            onclick="closeReportModal()"
+            class="w-full bg-brandBlue hover:bg-blue-600 text-white font-bold py-3 rounded-xl transition shadow-lg shadow-blue-500/30"
+          >
+            Enviar Reporte
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <script>
+      function toggleDarkMode() {
+        const htmlTag = document.documentElement;
+        if (htmlTag.classList.contains("dark")) {
+          htmlTag.classList.remove("dark");
+          localStorage.setItem("theme", "light");
+        } else {
+          htmlTag.classList.add("dark");
+          localStorage.setItem("theme", "dark");
+        }
+      }
+
+      window.onload = function () {
+        const savedTheme = localStorage.getItem("theme");
+        const htmlTag = document.documentElement;
+        const toggleCheckbox = document.getElementById("darkModeToggle");
+
+        if (savedTheme === "light") {
+          htmlTag.classList.remove("dark");
+          toggleCheckbox.checked = false;
+        } else {
+          htmlTag.classList.add("dark");
+          toggleCheckbox.checked = true;
+        }
+      };
+
+      function openReportModal() {
+        const modal = document.getElementById("reportModal");
+        const modalContent = document.getElementById("reportModalContent");
+        modal.classList.remove("hidden");
+        setTimeout(() => {
+          modal.classList.remove("opacity-0");
+          modalContent.classList.remove("scale-95");
+        }, 10);
+      }
+
+      function closeReportModal() {
+        const modal = document.getElementById("reportModal");
+        const modalContent = document.getElementById("reportModalContent");
+        modal.classList.add("opacity-0");
+        modalContent.classList.add("scale-95");
+        setTimeout(() => {
+          modal.classList.add("hidden");
+        }, 300);
+      }
+    </script>
+  </body>
+</html>
