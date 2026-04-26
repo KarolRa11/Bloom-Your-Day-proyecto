@@ -1,0 +1,15 @@
+{
+  "projects": {
+    "default": "bloomyourday-dd658"
+  },
+  "targets": {
+    "bloomyourday-dd658": {
+      "hosting": {
+        "landing": [
+          "bloomyourday-oficial"
+        ]
+      }
+    }
+  },
+  "etags": {}
+}

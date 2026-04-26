@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Descargar Bloom Your Day - Multiplataforma</title>
+
+    <link rel="icon" href="assets/images/logo.png" type="image/png" />
+
+    <link rel="stylesheet" href="css/styles.css" />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              brandDark: "#0f172a",
+              brandLight: "#f1f5f9",
+              brandEmerald: "#10b981",
+              brandBlue: "#3b82f6",
+              brandCardDark: "#1e293b",
+              brandCardLight: "#ffffff",
+            },
+          },
+        },
+      };
+    </script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body
+    class="bg-brandLight dark:bg-brandDark text-slate-900 dark:text-white font-sans antialiased selection:bg-brandEmerald selection:text-white min-h-screen flex flex-col"
+  >
+    <nav
+      class="fixed w-full z-50 bg-brandLight/80 dark:bg-brandDark/80 backdrop-blur-lg border-b border-slate-200 dark:border-white/10 transition-colors duration-500"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-20">
+          <a
+            href="index.html"
+            class="flex items-center gap-3 hover:opacity-80 transition"
+          >
+            <img
+              src="assets/images/logo.png"
+              alt="Logo Bloom Your Day"
+              class="h-10 w-auto object-contain"
+            />
+            <span
+              class="font-extrabold text-2xl tracking-tight text-slate-950 dark:text-white"
+              >Bloom Your Day</span
+            >
+          </a>
+
+          <div class="flex items-center gap-4 sm:gap-6">
+            <label
+              for="darkModeToggle"
+              class="relative flex items-center cursor-pointer"
+            >
+              <input
+                type="checkbox"
+                id="darkModeToggle"
+                class="sr-only peer"
+                checked
+                onclick="toggleDarkMode()"
+              />
+              <div
+                class="w-16 h-8 bg-slate-200 dark:bg-brandCardDark rounded-[40px] neumorphic-track transition-colors duration-500"
+              ></div>
+              <div
+                class="absolute left-0 w-8 h-8 bg-white dark:bg-slate-700 rounded-full neumorphic-thumb flex items-center justify-center transition-transform duration-500 peer-checked:translate-x-8"
+              >
+                <i
+                  class="fa-solid fa-sun text-amber-500 text-[14px] absolute transition-opacity opacity-100 dark:opacity-0 duration-500"
+                ></i>
+                <i
+                  class="fa-solid fa-moon text-blue-300 text-[14px] absolute transition-opacity opacity-0 dark:opacity-100 duration-500"
+                ></i>
+              </div>
+            </label>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <main class="flex-grow pt-28 pb-20 px-4 transition-colors duration-500">
+      <div class="max-w-6xl mx-auto mb-8 text-left">
+        <a
+          href="index.html"
+          class="inline-flex items-center gap-2 text-slate-600 dark:text-gray-300 hover:text-brandEmerald dark:hover:text-brandEmerald transition font-medium bg-slate-200/50 dark:bg-slate-800/50 px-5 py-2.5 rounded-full w-fit"
+        >
+          <i class="fa-solid fa-arrow-left"></i> Volver a Inicio
+        </a>
+      </div>
+
+      <div class="max-w-6xl mx-auto text-center">
+        <div
+          class="inline-flex items-center gap-3 bg-brandEmerald/10 text-brandEmerald px-5 py-2 rounded-full font-bold mb-6 border border-brandEmerald/20 text-sm"
+        >
+          <i class="fa-solid fa-cloud-arrow-down text-lg"></i> Versión 1.2.0
+          (Estable)
+        </div>
+        <h1
+          class="text-4xl md:text-5xl lg:text-6xl font-black tracking-tight mb-6 leading-tight text-slate-950 dark:text-white"
+        >
+          Elige tu plataforma
+        </h1>
+        <p
+          class="text-lg md:text-xl text-slate-600 dark:text-gray-400 max-w-2xl mx-auto mb-16 leading-relaxed"
+        >
+          Todo tu progreso se sincronizará automáticamente sin importar desde
+          dónde te conectes.
+        </p>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <a
+            href="https://app.bloomyourday.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="bg-white dark:bg-brandCardDark p-8 rounded-[30px] border border-slate-200 dark:border-white/5 hover:border-brandEmerald hover:shadow-2xl hover:-translate-y-2 transition-all group shadow-xl"
+          >
+            <div
+              class="bg-emerald-100 dark:bg-emerald-900/30 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform"
+            >
+              <i class="fa-brands fa-chrome text-3xl text-brandEmerald"></i>
+            </div>
+            <h2 class="text-2xl font-bold mb-2 text-slate-950 dark:text-white">
+              Web App
+            </h2>
+            <p
+              class="text-slate-500 dark:text-gray-400 text-sm mb-6 leading-relaxed"
+            >
+              Úsala desde cualquier navegador moderno sin instalar nada.
+            </p>
+            <span class="text-brandEmerald font-bold group-hover:underline"
+              >Abrir en el navegador &rarr;</span
+            >
+          </a>
+
+          <div
+            class="bg-white dark:bg-brandCardDark p-8 rounded-[30px] border border-slate-200 dark:border-white/5 hover:border-brandEmerald hover:shadow-2xl hover:-translate-y-2 transition-all group shadow-xl"
+          >
+            <div
+              class="bg-green-100 dark:bg-green-900/30 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform"
+            >
+              <i class="fa-brands fa-android text-3xl text-green-500"></i>
+            </div>
+            <h2 class="text-2xl font-bold mb-2 text-slate-950 dark:text-white">
+              Android
+            </h2>
+            <p
+              class="text-slate-500 dark:text-gray-400 text-sm mb-8 leading-relaxed"
+            >
+              Descarga la app oficial de seguimiento de hábitos para Android.
+            </p>
+
+            <a
+              href="https://play.google.com/store/apps/details?id=com.tu_usuario.bloomyourday"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="block w-full text-center bg-brandEmerald hover:bg-emerald-500 text-white px-6 py-3.5 rounded-xl font-bold transition shadow-lg hover:shadow-emerald-500/30 mb-4 flex items-center justify-center gap-2"
+            >
+              <i class="fa-brands fa-google-play"></i> Descargar en Play Store
+            </a>
+
+            <a
+              href="/assets/descargas/bloomyourday-v120.apk"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-slate-500 dark:text-gray-500 hover:text-slate-900 dark:hover:text-white transition text-sm font-medium hover:underline"
+            >
+              o Descarga Directa APK
+            </a>
+          </div>
+
+          <div
+            class="bg-white dark:bg-brandCardDark p-8 rounded-[30px] border border-slate-200 dark:border-white/5 hover:border-brandBlue hover:shadow-2xl hover:-translate-y-2 transition-all group shadow-xl relative overflow-hidden"
+          >
+            <div
+              class="absolute top-0 right-0 bg-brandBlue text-white text-[10px] font-bold px-4 py-1.5 rounded-bl-xl"
+            >
+              <i class="fa-solid fa-hourglass-half mr-1"></i> EN DESARROLLO
+            </div>
+            <div
+              class="bg-slate-200 dark:bg-slate-800 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform"
+            >
+              <i
+                class="fa-brands fa-apple text-3xl text-slate-900 dark:text-white"
+              ></i>
+            </div>
+            <h2 class="text-2xl font-bold mb-2 text-slate-950 dark:text-white">
+              iOS / iPadOS
+            </h2>
+            <p
+              class="text-slate-500 dark:text-gray-400 text-sm mb-6 leading-relaxed"
+            >
+              Próximamente disponible en la App Store para iPhone y iPad.
+            </p>
+            <span
+              class="block w-full text-center bg-slate-300 dark:bg-slate-700 text-slate-600 dark:text-gray-400 px-6 py-3.5 rounded-xl font-medium cursor-not-allowed"
+            >
+              Próximamente...
+            </span>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer
+      class="bg-slate-50 dark:bg-brandCardDark border-t border-slate-200 dark:border-white/5 pt-16 pb-8 transition-colors duration-500 mt-auto"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+          <div class="col-span-1 md:col-span-1">
+            <div class="flex items-center gap-3 mb-4">
+              <img
+                src="assets/images/logo.png"
+                alt="Logo Footer"
+                class="h-8 w-auto object-contain"
+              />
+              <span class="font-bold text-xl text-slate-950 dark:text-white"
+                >Bloom Your Day</span
+              >
+            </div>
+            <p class="text-slate-600 dark:text-gray-400 text-sm mb-6">
+              Forjando disciplina, un hábito a la vez.
+            </p>
+            <div class="flex space-x-4 social-links">
+              <a
+                href="https://instagram.com/TU_USUARIO"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-slate-400 hover:text-brandEmerald transition text-xl"
+                ><i class="fa-brands fa-instagram"></i
+              ></a>
+              <a
+                href="https://twitter.com/TU_USUARIO"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-slate-400 hover:text-brandBlue transition text-xl"
+                ><i class="fa-brands fa-twitter"></i
+              ></a>
+              <a
+                href="https://github.com/TU_USUARIO"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-slate-400 hover:text-slate-900 dark:hover:text-white transition text-xl"
+                ><i class="fa-brands fa-github"></i
+              ></a>
+            </div>
+          </div>
+          <div>
+            <h4 class="font-bold text-slate-950 dark:text-white mb-4">
+              Explorar
+            </h4>
+            <ul class="space-y-3 text-sm text-slate-600 dark:text-gray-400">
+              <li>
+                <a
+                  href="index.html#atractivos"
+                  class="hover:text-brandEmerald transition"
+                  >Atractivos</a
+                >
+              </li>
+              <li>
+                <a
+                  href="index.html#quienes-somos"
+                  class="hover:text-brandEmerald transition"
+                  >Quiénes Somos</a
+                >
+              </li>
+              <li>
+                <a
+                  href="index.html#mision"
+                  class="hover:text-brandEmerald transition"
+                  >Misión y Visión</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="font-bold text-slate-950 dark:text-white mb-4">Legal</h4>
+            <ul class="space-y-3 text-sm text-slate-600 dark:text-gray-400">
+              <li>
+                <a
+                  href="index.html"
+                  class="hover:text-brandEmerald transition text-left"
+                  >Términos de Servicio</a
+                >
+              </li>
+              <li>
+                <a
+                  href="index.html"
+                  class="hover:text-brandEmerald transition text-left"
+                  >Política de Privacidad</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="font-bold text-slate-950 dark:text-white mb-4">
+              Soporte
+            </h4>
+            <ul class="space-y-3 text-sm text-slate-600 dark:text-gray-400">
+              <li>
+                <a
+                  href="mailto:soporte@bloomyourday.com"
+                  class="hover:text-brandEmerald transition"
+                  >Centro de Ayuda</a
+                >
+              </li>
+              <li>
+                <button
+                  onclick="openReportModal()"
+                  class="text-brandBlue hover:text-blue-500 font-bold transition flex items-center gap-2 mt-2"
+                >
+                  <i class="fa-solid fa-bug"></i> ¿Encontraste un problema?
+                </button>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div
+          class="border-t border-slate-200 dark:border-white/5 pt-8 text-center text-slate-500 text-xs"
+        >
+          &copy; 2026 Bloom Your Day. Todos los derechos reservados.
+        </div>
+      </div>
+    </footer>
+
+    <div
+      id="reportModal"
+      class="fixed inset-0 z-[100] hidden bg-brandDark/80 backdrop-blur-sm flex items-center justify-center p-4 opacity-0 transition-opacity duration-300"
+    >
+      <div
+        id="reportModalContent"
+        class="bg-white dark:bg-brandCardDark p-8 rounded-3xl border border-black/10 dark:border-white/10 w-full max-w-lg shadow-2xl relative transform scale-95 transition-transform duration-300"
+      >
+        <button
+          onclick="closeReportModal()"
+          class="absolute top-5 right-5 text-slate-400 hover:text-rose-500 transition text-2xl"
+        >
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+        <div class="text-center mb-6">
+          <i class="fa-solid fa-headset text-4xl text-brandBlue mb-4"></i>
+          <h2 class="text-2xl font-bold mb-2 text-slate-950 dark:text-white">
+            Reportar un Problema
+          </h2>
+          <p class="text-slate-600 dark:text-gray-400 text-sm">
+            Descríbenos el error que encontraste o envíanos tu sugerencia.
+          </p>
+        </div>
+        <form
+          class="space-y-4"
+          action="https://formspree.io/f/TU_CODIGO_AQUI"
+          method="POST"
+        >
+          <input
+            type="email"
+            name="email"
+            required
+            placeholder="Tu Correo Electrónico"
+            class="w-full bg-slate-100 dark:bg-brandDark border border-black/10 dark:border-white/10 rounded-xl px-4 py-3 text-slate-950 dark:text-white focus:outline-none focus:border-brandEmerald transition"
+          />
+          <textarea
+            name="mensaje"
+            required
+            rows="4"
+            placeholder="Describe el problema en detalle..."
+            class="w-full bg-slate-100 dark:bg-brandDark border border-black/10 dark:border-white/10 rounded-xl px-4 py-3 text-slate-950 dark:text-white focus:outline-none focus:border-brandEmerald transition"
+          ></textarea>
+          <button
+            type="submit"
+            class="w-full bg-brandBlue hover:bg-blue-600 text-white font-bold py-3 rounded-xl transition shadow-lg shadow-blue-500/30"
+          >
+            Enviar Reporte
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <script>
+      // Lógica Modo Oscuro/Claro (Se mantiene constante usando localStorage)
+      function toggleDarkMode() {
+        const htmlTag = document.documentElement;
+        if (htmlTag.classList.contains("dark")) {
+          htmlTag.classList.remove("dark");
+          localStorage.setItem("theme", "light");
+        } else {
+          htmlTag.classList.add("dark");
+          localStorage.setItem("theme", "dark");
+        }
+      }
+      window.onload = function () {
+        const savedTheme = localStorage.getItem("theme");
+        const htmlTag = document.documentElement;
+        const toggleCheckbox = document.getElementById("darkModeToggle");
+        if (savedTheme === "light") {
+          htmlTag.classList.remove("dark");
+          toggleCheckbox.checked = false;
+        } else {
+          htmlTag.classList.add("dark");
+          toggleCheckbox.checked = true;
+        }
+      };
+      // Lógica Modal Reporte
+      function openReportModal() {
+        const modal = document.getElementById("reportModal");
+        const modalContent = document.getElementById("reportModalContent");
+        modal.classList.remove("hidden");
+        setTimeout(() => {
+          modal.classList.remove("opacity-0");
+          modalContent.classList.remove("scale-95");
+        }, 10);
+      }
+      function closeReportModal() {
+        const modal = document.getElementById("reportModal");
+        const modalContent = document.getElementById("reportModalContent");
+        modal.classList.add("opacity-0");
+        modalContent.classList.add("scale-95");
+        setTimeout(() => {
+          modal.classList.add("hidden");
+        }, 300);
+      }
+    </script>
+  </body>
+</html>

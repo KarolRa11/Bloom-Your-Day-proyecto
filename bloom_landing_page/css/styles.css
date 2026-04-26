@@ -1,0 +1,37 @@
+/* ==================================================
+   BLOOM YOUR DAY - ESTILOS BASE Y ANIMACIONES
+   ================================================== */
+body,
+.bg-brandCard,
+.border,
+p,
+h1,
+h2,
+h3,
+h4,
+span,
+div,
+a {
+  transition: background-color 0.4s ease, color 0.4s ease,
+    border-color 0.4s ease, box-shadow 0.4s ease;
+}
+
+/* ==================================================
+     SWITCH NEUMÓRFICO (DARK/LIGHT MODE)
+     ================================================== */
+.neumorphic-track {
+  box-shadow: inset 3px 3px 6px rgba(0, 0, 0, 0.1),
+    inset -3px -3px 6px rgba(255, 255, 255, 0.7);
+}
+.dark .neumorphic-track {
+  box-shadow: inset 3px 3px 6px rgba(0, 0, 0, 0.5),
+    inset -3px -3px 6px rgba(255, 255, 255, 0.02);
+}
+.neumorphic-thumb {
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.15),
+    -2px -2px 5px rgba(255, 255, 255, 0.8);
+}
+.dark .neumorphic-thumb {
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5),
+    -1px -1px 3px rgba(255, 255, 255, 0.1);
+}

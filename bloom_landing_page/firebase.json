@@ -1,0 +1,7 @@
+{
+  "hosting": {
+    "target": "landing",
+    "public": ".",
+    "ignore": ["firebase.json", "**/.*", "**/node_modules/**"]
+  }
+}

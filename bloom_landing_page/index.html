@@ -1,9 +1,13 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es" class="scroll-smooth dark">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Bloom Your Day - Forja tu Disciplina Diaria</title>
+
+    <link rel="icon" href="assets/images/logo.png" type="image/png" />
+
+    <link rel="stylesheet" href="css/styles.css" />
 
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -23,52 +27,10 @@
         },
       };
     </script>
-
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
-
-    <style>
-      body,
-      .bg-brandCard,
-      .border,
-      p,
-      h1,
-      h2,
-      h3,
-      h4,
-      span,
-      div {
-        transition:
-          background-color 0.4s ease,
-          color 0.4s ease,
-          border-color 0.4s ease,
-          box-shadow 0.4s ease;
-      }
-
-      /* Estilos Neumórficos Custom para el Switch */
-      .neumorphic-track {
-        box-shadow:
-          inset 3px 3px 6px rgba(0, 0, 0, 0.1),
-          inset -3px -3px 6px rgba(255, 255, 255, 0.7);
-      }
-      .dark .neumorphic-track {
-        box-shadow:
-          inset 3px 3px 6px rgba(0, 0, 0, 0.5),
-          inset -3px -3px 6px rgba(255, 255, 255, 0.02);
-      }
-      .neumorphic-thumb {
-        box-shadow:
-          2px 2px 5px rgba(0, 0, 0, 0.15),
-          -2px -2px 5px rgba(255, 255, 255, 0.8);
-      }
-      .dark .neumorphic-thumb {
-        box-shadow:
-          2px 2px 5px rgba(0, 0, 0, 0.5),
-          -1px -1px 3px rgba(255, 255, 255, 0.1);
-      }
-    </style>
   </head>
   <body
     class="bg-brandLight dark:bg-brandDark text-slate-900 dark:text-white font-sans antialiased selection:bg-brandEmerald selection:text-white min-h-screen"
@@ -78,9 +40,12 @@
     >
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex justify-between items-center h-20">
-          <div class="flex items-center gap-3">
+          <a
+            href="index.html"
+            class="flex items-center gap-3 hover:opacity-80 transition"
+          >
             <img
-              src="logo.png"
+              src="assets/images/logo.png"
               alt="Logo Bloom Your Day"
               class="h-10 w-auto object-contain"
             />
@@ -88,7 +53,7 @@
               class="font-extrabold text-2xl tracking-tight text-slate-950 dark:text-white"
               >Bloom Your Day</span
             >
-          </div>
+          </a>
 
           <div
             class="hidden lg:flex space-x-6 items-center font-medium text-sm"
@@ -139,8 +104,7 @@
 
             <a
               href="descargas.html"
-              target="_blank"
-              class="bg-brandEmerald hover:bg-emerald-500 text-white px-5 py-2.5 rounded-full font-bold transition-all shadow-lg hover:shadow-emerald-500/30 transform hover:-translate-y-0.5 text-sm sm:text-base"
+              class="bg-brandEmerald hover:bg-emerald-500 text-white px-5 py-2.5 rounded-full font-bold shadow-lg hover:-translate-y-0.5 transition-all text-sm sm:text-base"
             >
               Comenzar
             </a>
@@ -173,14 +137,11 @@
           Reemplaza la procrastinación por disciplina. Haz seguimiento de tus
           hábitos, gana experiencia (XP) y sube de nivel en el mundo real.
         </p>
-
         <a
           href="descargas.html"
-          target="_blank"
-          class="inline-flex items-center justify-center gap-4 bg-gradient-to-r from-brandEmerald to-emerald-500 text-white px-12 py-5 rounded-full font-extrabold text-2xl transition-all shadow-[0_0_40px_rgba(16,185,129,0.3)] hover:shadow-[0_0_60px_rgba(16,185,129,0.5)] hover:scale-105 transform"
+          class="inline-flex items-center justify-center gap-4 bg-gradient-to-r from-brandEmerald to-emerald-500 text-white px-12 py-5 rounded-full font-extrabold text-2xl transition-all shadow-[0_0_40px_rgba(16,185,129,0.3)] hover:scale-105 transform hover:-translate-y-1"
         >
-          Descargar la App
-          <i class="fa-solid fa-arrow-down-right-from-square text-lg"></i>
+          Descargar la App <i class="fa-solid fa-arrow-right text-lg"></i>
         </a>
       </div>
       <div
@@ -202,10 +163,9 @@
             mantenerte enfocado.
           </p>
         </div>
-
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           <div
-            class="bg-slate-50 dark:bg-brandDark p-8 rounded-3xl border border-slate-200 dark:border-white/5 hover:bg-purple-50 dark:hover:bg-purple-900/20 hover:border-purple-300 dark:hover:border-purple-500/50 hover:shadow-xl transition-all group duration-[400ms]"
+            class="bg-slate-100 dark:bg-brandDark p-8 rounded-3xl border border-black/5 dark:border-white/5 hover:bg-purple-50 dark:hover:bg-purple-900/20 hover:border-purple-300 hover:shadow-xl transition-all group duration-[400ms]"
           >
             <i
               class="fa-solid fa-gamepad text-3xl text-purple-500 dark:text-purple-400 mb-6 block group-hover:scale-110 transition-transform"
@@ -213,15 +173,13 @@
             <h3 class="text-xl font-bold mb-3 text-slate-950 dark:text-white">
               XP y Niveles Reales
             </h3>
-            <p
-              class="text-slate-600 dark:text-gray-400 text-sm leading-relaxed"
-            >
+            <p class="text-slate-600 dark:text-gray-400 text-sm">
               Gana experiencia por cada hábito. Sube de nivel y desbloquea temas
               visuales exclusivos.
             </p>
           </div>
           <div
-            class="bg-slate-50 dark:bg-brandDark p-8 rounded-3xl border border-slate-200 dark:border-white/5 hover:bg-rose-50 dark:hover:bg-rose-900/20 hover:border-rose-300 dark:hover:border-rose-500/50 hover:shadow-xl transition-all group duration-[400ms]"
+            class="bg-slate-100 dark:bg-brandDark p-8 rounded-3xl border border-black/5 dark:border-white/5 hover:bg-rose-50 dark:hover:bg-rose-900/20 hover:border-rose-300 hover:shadow-xl transition-all group duration-[400ms]"
           >
             <i
               class="fa-solid fa-fire text-3xl text-rose-500 mb-6 block group-hover:scale-110 transition-transform"
@@ -229,15 +187,13 @@
             <h3 class="text-xl font-bold mb-3 text-slate-950 dark:text-white">
               Rachas de Disciplina
             </h3>
-            <p
-              class="text-slate-600 dark:text-gray-400 text-sm leading-relaxed"
-            >
+            <p class="text-slate-600 dark:text-gray-400 text-sm">
               Mantén vivos tus hábitos. Las rachas continuas te motivan a no
               fallar ni un solo día.
             </p>
           </div>
           <div
-            class="bg-slate-50 dark:bg-brandDark p-8 rounded-3xl border border-slate-200 dark:border-white/5 hover:bg-emerald-50 dark:hover:bg-emerald-900/20 hover:border-emerald-300 dark:hover:border-brandEmerald/50 hover:shadow-xl transition-all group duration-[400ms]"
+            class="bg-slate-100 dark:bg-brandDark p-8 rounded-3xl border border-black/5 dark:border-white/5 hover:bg-emerald-50 dark:hover:bg-emerald-900/20 hover:border-emerald-300 hover:shadow-xl transition-all group duration-[400ms]"
           >
             <i
               class="fa-solid fa-chart-pie text-3xl text-brandEmerald mb-6 block group-hover:scale-110 transition-transform"
@@ -245,15 +201,13 @@
             <h3 class="text-xl font-bold mb-3 text-slate-950 dark:text-white">
               Estadísticas Avanzadas
             </h3>
-            <p
-              class="text-slate-600 dark:text-gray-400 text-sm leading-relaxed"
-            >
+            <p class="text-slate-600 dark:text-gray-400 text-sm">
               Mapas de calor de actividad y gráficas mensuales para conocer tu
               rendimiento a fondo.
             </p>
           </div>
           <div
-            class="bg-slate-50 dark:bg-brandDark p-8 rounded-3xl border border-slate-200 dark:border-white/5 hover:bg-blue-50 dark:hover:bg-blue-900/20 hover:border-blue-300 dark:hover:border-blue-500/50 hover:shadow-xl transition-all group duration-[400ms]"
+            class="bg-slate-100 dark:bg-brandDark p-8 rounded-3xl border border-black/5 dark:border-white/5 hover:bg-blue-50 dark:hover:bg-blue-900/20 hover:border-blue-300 hover:shadow-xl transition-all group duration-[400ms]"
           >
             <i
               class="fa-solid fa-cloud-arrow-up text-3xl text-blue-500 mb-6 block group-hover:scale-110 transition-transform"
@@ -261,15 +215,13 @@
             <h3 class="text-xl font-bold mb-3 text-slate-950 dark:text-white">
               Sincronización en Nube
             </h3>
-            <p
-              class="text-slate-600 dark:text-gray-400 text-sm leading-relaxed"
-            >
+            <p class="text-slate-600 dark:text-gray-400 text-sm">
               Conéctate desde tu celular o computadora. Tu progreso se guarda y
               sincroniza al instante.
             </p>
           </div>
           <div
-            class="bg-slate-50 dark:bg-brandDark p-8 rounded-3xl border border-slate-200 dark:border-white/5 hover:bg-orange-50 dark:hover:bg-orange-900/20 hover:border-orange-300 dark:hover:border-orange-500/50 hover:shadow-xl transition-all group duration-[400ms]"
+            class="bg-slate-100 dark:bg-brandDark p-8 rounded-3xl border border-black/5 dark:border-white/5 hover:bg-orange-50 dark:hover:bg-orange-900/20 hover:border-orange-300 hover:shadow-xl transition-all group duration-[400ms]"
           >
             <i
               class="fa-solid fa-hourglass-half text-3xl text-orange-500 mb-6 block group-hover:scale-110 transition-transform"
@@ -277,15 +229,13 @@
             <h3 class="text-xl font-bold mb-3 text-slate-950 dark:text-white">
               Modo Focus Exclusivo
             </h3>
-            <p
-              class="text-slate-600 dark:text-gray-400 text-sm leading-relaxed"
-            >
+            <p class="text-slate-600 dark:text-gray-400 text-sm">
               Un temporizador inmersivo de pantalla completa diseñado para
-              sesiones de trabajo sin distracciones.
+              sesiones sin distracciones.
             </p>
           </div>
           <div
-            class="bg-slate-50 dark:bg-brandDark p-8 rounded-3xl border border-slate-200 dark:border-white/5 hover:bg-sky-50 dark:hover:bg-sky-900/20 hover:border-sky-300 dark:hover:border-sky-500/50 hover:shadow-xl transition-all group duration-[400ms]"
+            class="bg-slate-100 dark:bg-brandDark p-8 rounded-3xl border border-black/5 dark:border-white/5 hover:bg-sky-50 dark:hover:bg-sky-900/20 hover:border-sky-300 hover:shadow-xl transition-all group duration-[400ms]"
           >
             <i
               class="fa-solid fa-fingerprint text-3xl text-sky-400 mb-6 block group-hover:scale-110 transition-transform"
@@ -293,11 +243,9 @@
             <h3 class="text-xl font-bold mb-3 text-slate-950 dark:text-white">
               Privacidad Biométrica
             </h3>
-            <p
-              class="text-slate-600 dark:text-gray-400 text-sm leading-relaxed"
-            >
+            <p class="text-slate-600 dark:text-gray-400 text-sm">
               Tus metas son personales. Protege el acceso mediante huella
-              dactilar o Face ID de tu dispositivo.
+              dactilar o Face ID.
             </p>
           </div>
         </div>
@@ -315,7 +263,7 @@
               class="relative bg-white dark:bg-brandCardDark p-10 rounded-[30px] border border-slate-200 dark:border-white/10 shadow-2xl w-full max-w-md flex justify-center items-center h-80 transition-colors duration-[400ms]"
             >
               <img
-                src="logo.png"
+                src="assets/images/logo.png"
                 alt="Logo Centro"
                 class="h-40 w-auto object-contain relative z-10 transition-transform hover:scale-105"
               />
@@ -324,7 +272,6 @@
               ></div>
             </div>
           </div>
-
           <div class="lg:w-1/2">
             <h2 class="text-4xl font-bold mb-6 text-slate-950 dark:text-white">
               Quiénes Somos
@@ -357,7 +304,7 @@
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="grid grid-cols-1 md:grid-cols-2 gap-10 mb-10">
           <div
-            class="bg-slate-50 dark:bg-brandDark p-10 md:p-14 rounded-[30px] border border-brandEmerald/20 relative overflow-hidden group hover:-translate-y-2 transition-transform duration-300 shadow-xl"
+            class="bg-slate-100 dark:bg-brandDark p-10 md:p-14 rounded-[30px] border border-brandEmerald/20 relative overflow-hidden group hover:-translate-y-2 transition-transform duration-300 shadow-xl"
           >
             <div
               class="absolute top-0 right-0 w-32 h-32 bg-brandEmerald/10 rounded-bl-full -z-0"
@@ -382,9 +329,8 @@
               </p>
             </div>
           </div>
-
           <div
-            class="bg-slate-50 dark:bg-brandDark p-10 md:p-14 rounded-[30px] border border-brandBlue/20 relative overflow-hidden group hover:-translate-y-2 transition-transform duration-300 shadow-xl"
+            class="bg-slate-100 dark:bg-brandDark p-10 md:p-14 rounded-[30px] border border-brandBlue/20 relative overflow-hidden group hover:-translate-y-2 transition-transform duration-300 shadow-xl"
           >
             <div
               class="absolute top-0 right-0 w-32 h-32 bg-brandBlue/10 rounded-bl-full -z-0"
@@ -410,10 +356,9 @@
             </div>
           </div>
         </div>
-
         <div class="flex justify-center">
           <div
-            class="max-w-4xl w-full bg-slate-50 dark:bg-brandDark p-10 md:p-14 rounded-[30px] border border-brandEmerald/20 relative overflow-hidden shadow-xl text-center transition-colors duration-[400ms]"
+            class="max-w-4xl w-full bg-slate-100 dark:bg-brandDark p-10 md:p-14 rounded-[30px] border border-brandEmerald/20 relative overflow-hidden shadow-xl text-center transition-colors duration-[400ms]"
           >
             <div
               class="absolute inset-0 bg-brandEmerald/5 pointer-events-none"
@@ -434,9 +379,7 @@
               >
                 Utilizamos principios de la psicología del comportamiento y el
                 condicionamiento operante. Al gamificar tus hábitos, reducimos
-                la carga cognitiva necesaria para empezar. Tu cerebro se
-                "sintoniza" para buscar la disciplina a cambio de la dopamina
-                del logro visual.
+                la carga cognitiva necesaria para empezar.
               </p>
             </div>
           </div>
@@ -445,14 +388,14 @@
     </section>
 
     <footer
-      class="bg-slate-50 dark:bg-brandCardDark border-t border-slate-200 dark:border-white/5 pt-16 pb-8 transition-colors duration-[400ms]"
+      class="bg-slate-50 dark:bg-brandCardDark border-t border-slate-200 dark:border-white/5 pt-16 pb-8 transition-colors duration-500"
     >
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
           <div class="col-span-1 md:col-span-1">
             <div class="flex items-center gap-3 mb-4">
               <img
-                src="logo.png"
+                src="assets/images/logo.png"
                 alt="Logo Footer"
                 class="h-8 w-auto object-contain"
               />
@@ -463,23 +406,30 @@
             <p class="text-slate-600 dark:text-gray-400 text-sm mb-6">
               Forjando disciplina, un hábito a la vez.
             </p>
-            <div class="flex space-x-4">
+            <div class="flex space-x-4 social-links">
               <a
-                href="#"
-                class="text-slate-400 hover:text-brandEmerald transition"
-                ><i class="fa-brands fa-instagram text-xl"></i
-              ></a>
-              <a href="#" class="text-slate-400 hover:text-brandBlue transition"
-                ><i class="fa-brands fa-twitter text-xl"></i
+                href="https://instagram.com/TU_USUARIO"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-slate-400 hover:text-brandEmerald transition text-xl"
+                ><i class="fa-brands fa-instagram"></i
               ></a>
               <a
-                href="#"
-                class="text-slate-400 hover:text-slate-900 dark:hover:text-white transition"
-                ><i class="fa-brands fa-github text-xl"></i
+                href="https://twitter.com/TU_USUARIO"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-slate-400 hover:text-brandBlue transition text-xl"
+                ><i class="fa-brands fa-twitter"></i
+              ></a>
+              <a
+                href="https://github.com/TU_USUARIO"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-slate-400 hover:text-slate-900 dark:hover:text-white transition text-xl"
+                ><i class="fa-brands fa-github"></i
               ></a>
             </div>
           </div>
-
           <div>
             <h4 class="font-bold text-slate-950 dark:text-white mb-4">
               Explorar
@@ -504,23 +454,27 @@
               </li>
             </ul>
           </div>
-
           <div>
             <h4 class="font-bold text-slate-950 dark:text-white mb-4">Legal</h4>
             <ul class="space-y-3 text-sm text-slate-600 dark:text-gray-400">
               <li>
-                <a href="#" class="hover:text-brandEmerald transition"
-                  >Términos de Servicio</a
+                <button
+                  onclick="openModal('terminosModal')"
+                  class="hover:text-brandEmerald transition text-left"
                 >
+                  Términos de Servicio
+                </button>
               </li>
               <li>
-                <a href="#" class="hover:text-brandEmerald transition"
-                  >Política de Privacidad</a
+                <button
+                  onclick="openModal('privacidadModal')"
+                  class="hover:text-brandEmerald transition text-left"
                 >
+                  Política de Privacidad
+                </button>
               </li>
             </ul>
           </div>
-
           <div>
             <h4 class="font-bold text-slate-950 dark:text-white mb-4">
               Soporte
@@ -544,7 +498,6 @@
             </ul>
           </div>
         </div>
-
         <div
           class="border-t border-slate-200 dark:border-white/5 pt-8 text-center text-slate-500 text-xs"
         >
@@ -552,6 +505,93 @@
         </div>
       </div>
     </footer>
+
+    <div
+      id="terminosModal"
+      class="fixed inset-0 z-[100] hidden bg-brandDark/90 backdrop-blur-sm flex items-center justify-center p-4 opacity-0 transition-opacity duration-300"
+    >
+      <div
+        class="bg-white dark:bg-brandCardDark p-8 rounded-3xl border border-black/10 dark:border-white/10 w-full max-w-3xl max-h-[80vh] overflow-y-auto shadow-2xl relative transform scale-95 transition-transform duration-300 content-modal"
+      >
+        <button
+          onclick="closeModal('terminosModal')"
+          class="absolute top-5 right-5 text-slate-400 hover:text-rose-500 transition text-2xl"
+        >
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+        <h2
+          class="text-2xl font-bold mb-6 text-slate-950 dark:text-white flex items-center gap-3"
+        >
+          <i class="fa-solid fa-file-contract text-brandBlue"></i> Términos de
+          Servicio
+        </h2>
+        <div
+          class="space-y-4 text-slate-600 dark:text-gray-300 text-sm leading-relaxed"
+        >
+          <p class="font-bold text-slate-800 dark:text-white">
+            Última actualización: 21 de Abril, 2026
+          </p>
+          <p>
+            Al descargar, acceder o utilizar la aplicación Bloom Your Day, usted
+            acepta estar sujeto a estos Términos de Servicio.
+          </p>
+          <h4 class="font-bold text-lg mt-5">Uso de la Licencia</h4>
+          <p>
+            Le otorgamos una licencia limitada, no exclusiva e intransferible
+            para usar Bloom Your Day en sus dispositivos personales.
+          </p>
+          <h4 class="font-bold text-lg mt-5">Conducta del Usuario</h4>
+          <p>
+            Usted se compromete a no utilizar la aplicación para fines ilegales
+            y a no intentar descompilar el software.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div
+      id="privacidadModal"
+      class="fixed inset-0 z-[100] hidden bg-brandDark/90 backdrop-blur-sm flex items-center justify-center p-4 opacity-0 transition-opacity duration-300"
+    >
+      <div
+        class="bg-white dark:bg-brandCardDark p-8 rounded-3xl border border-black/10 dark:border-white/10 w-full max-w-3xl max-h-[80vh] overflow-y-auto shadow-2xl relative transform scale-95 transition-transform duration-300 content-modal"
+      >
+        <button
+          onclick="closeModal('privacidadModal')"
+          class="absolute top-5 right-5 text-slate-400 hover:text-rose-500 transition text-2xl"
+        >
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+        <h2
+          class="text-2xl font-bold mb-6 text-slate-950 dark:text-white flex items-center gap-3"
+        >
+          <i class="fa-solid fa-user-shield text-brandEmerald"></i> Política de
+          Privacidad
+        </h2>
+        <div
+          class="space-y-4 text-slate-600 dark:text-gray-300 text-sm leading-relaxed"
+        >
+          <p class="font-bold text-slate-800 dark:text-white">
+            Última actualización: 21 de Abril, 2026
+          </p>
+          <p>
+            Su privacidad es fundamental para nosotros. Esta política explica
+            qué datos recopilamos y cómo los protegemos.
+          </p>
+          <h4 class="font-bold text-lg mt-5">Recopilación y Uso de Datos</h4>
+          <p>
+            Recopilamos su correo electrónico solo si decide crear una cuenta
+            para la sincronización en la nube. Usamos sus datos para autenticar
+            su cuenta.
+          </p>
+          <h4 class="font-bold text-lg mt-5">Seguridad</h4>
+          <p>
+            Implementamos medidas de seguridad estándar de la industria. Nunca
+            venderemos su información a terceros.
+          </p>
+        </div>
+      </div>
+    </div>
 
     <div
       id="reportModal"
@@ -567,7 +607,6 @@
         >
           <i class="fa-solid fa-xmark"></i>
         </button>
-
         <div class="text-center mb-6">
           <i class="fa-solid fa-headset text-4xl text-brandBlue mb-4"></i>
           <h2 class="text-2xl font-bold mb-2 text-slate-950 dark:text-white">
@@ -577,21 +616,27 @@
             Descríbenos el error que encontraste o envíanos tu sugerencia.
           </p>
         </div>
-
-        <form class="space-y-4">
+        <form
+          class="space-y-4"
+          action="https://formspree.io/f/TU_CODIGO_AQUI"
+          method="POST"
+        >
           <input
             type="email"
+            name="email"
+            required
             placeholder="Tu Correo Electrónico"
             class="w-full bg-slate-100 dark:bg-brandDark border border-black/10 dark:border-white/10 rounded-xl px-4 py-3 text-slate-950 dark:text-white focus:outline-none focus:border-brandEmerald transition"
           />
           <textarea
+            name="mensaje"
+            required
             rows="4"
             placeholder="Describe el problema en detalle..."
             class="w-full bg-slate-100 dark:bg-brandDark border border-black/10 dark:border-white/10 rounded-xl px-4 py-3 text-slate-950 dark:text-white focus:outline-none focus:border-brandEmerald transition"
           ></textarea>
           <button
-            type="button"
-            onclick="closeReportModal()"
+            type="submit"
             class="w-full bg-brandBlue hover:bg-blue-600 text-white font-bold py-3 rounded-xl transition shadow-lg shadow-blue-500/30"
           >
             Enviar Reporte
@@ -611,12 +656,10 @@
           localStorage.setItem("theme", "dark");
         }
       }
-
       window.onload = function () {
         const savedTheme = localStorage.getItem("theme");
         const htmlTag = document.documentElement;
         const toggleCheckbox = document.getElementById("darkModeToggle");
-
         if (savedTheme === "light") {
           htmlTag.classList.remove("dark");
           toggleCheckbox.checked = false;
@@ -625,7 +668,24 @@
           toggleCheckbox.checked = true;
         }
       };
-
+      function openModal(modalId) {
+        const modal = document.getElementById(modalId);
+        const content = modal.querySelector(".content-modal");
+        modal.classList.remove("hidden");
+        setTimeout(() => {
+          modal.classList.remove("opacity-0");
+          content.classList.remove("scale-95");
+        }, 10);
+      }
+      function closeModal(modalId) {
+        const modal = document.getElementById(modalId);
+        const content = modal.querySelector(".content-modal");
+        modal.classList.add("opacity-0");
+        content.classList.add("scale-95");
+        setTimeout(() => {
+          modal.classList.add("hidden");
+        }, 300);
+      }
       function openReportModal() {
         const modal = document.getElementById("reportModal");
         const modalContent = document.getElementById("reportModalContent");
@@ -635,7 +695,6 @@
           modalContent.classList.remove("scale-95");
         }, 10);
       }
-
       function closeReportModal() {
         const modal = document.getElementById("reportModal");
         const modalContent = document.getElementById("reportModalContent");
